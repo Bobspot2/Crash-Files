@@ -1,0 +1,349 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 9/7/17 5:28 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.NoClassDefFoundError: climateControl/customGenLayer/GenLayerRiverMixWrapper
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:544)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:208)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:480)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:878)
+	at net.minecraft.client.main.Main.main(SourceFile:148)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.multimc.onesix.OneSixLauncher.launchWithMainClass(OneSixLauncher.java:236)
+	at org.multimc.onesix.OneSixLauncher.launch(OneSixLauncher.java:297)
+	at org.multimc.EntryPoint.listen(EntryPoint.java:162)
+	at org.multimc.EntryPoint.main(EntryPoint.java:53)
+Caused by: java.lang.NoClassDefFoundError: climateControl/customGenLayer/GenLayerRiverMixWrapper
+	at climateControl.ClimateControl.<init>(ClimateControl.java:56)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at cpw.mods.fml.common.ILanguageAdapter$JavaAdapter.getNewInstance(ILanguageAdapter.java:173)
+	at cpw.mods.fml.common.FMLModContainer.constructMod(FMLModContainer.java:506)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.loadMods(Loader.java:513)
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: climateControl.customGenLayer.GenLayerRiverMixWrapper
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 47 more
+Caused by: java.lang.NoClassDefFoundError: net/minecraft/world/gen/layer/GenLayerRiverMix
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 49 more
+Caused by: java.lang.ClassNotFoundException: net.minecraft.world.gen.layer.GenLayerRiverMix
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:101)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 53 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_144, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 1518755672 bytes (1448 MB) / 2155347968 bytes (2055 MB) up to 3817865216 bytes (3641 MB)
+	Mod Pack: ~~ERROR~~ NullPointerException: null
+	LiteLoader Mods: ~~ERROR~~ NullPointerException: null
+	LaunchWrapper: 73 active transformer(s)
+          - Transformer: logisticspipes.asm.LogisticsPipesClassInjector
+          - Transformer: cpw.mods.fml.common.asm.transformers.PatchingTransformer
+          - Transformer: optifine.OptiFineClassTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.MarkerTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.SideTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.EventSubscriptionTransformer
+          - Transformer: net.minecraftforge.classloading.FluidIdTransformer
+          - Transformer: appeng.transformer.asm.ASMIntegration
+          - Transformer: codechicken.lib.asm.ClassHeirachyManager
+          - Transformer: codechicken.core.asm.InterfaceDependancyTransformer
+          - Transformer: codechicken.core.asm.TweakTransformer
+          - Transformer: codechicken.core.asm.DelegatedTransformer
+          - Transformer: codechicken.core.asm.DefaultImplementationTransformer
+          - Transformer: com.rebelkeithy.dualhotbar.DualHotbarTransformer
+          - Transformer: com.pau101.fairylights.core.FairyLightsClassTransformer
+          - Transformer: logisticspipes.asm.LogisticsClassTransformer
+          - Transformer: mcp.mobius.mobiuscore.asm.CoreTransformer
+          - Transformer: codechicken.nei.asm.NEITransformer
+          - Transformer: li.cil.oc.common.asm.ClassTransformer
+          - Transformer: stevesaddons.asm.StevesAddonsTransformer
+          - Transformer: thaumicenergistics.fml.ASMTransformer
+          - Transformer: thaumic.tinkerer.preloader.AccessTransformer
+          - Transformer: com.mumfrey.liteloader.transformers.event.EventProxyTransformer
+          - Transformer: com.mumfrey.liteloader.launch.LiteLoaderTransformer
+          - Transformer: com.mumfrey.liteloader.client.transformers.CrashReportTransformer
+          - Transformer: openmods.core.OpenModsClassTransformer
+          - Transformer: openblocks.asm.OpenBlocksClassTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.DeobfuscationTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.AccessTransformer
+          - Transformer: net.minecraftforge.transformers.ForgeAccessTransformer
+          - Transformer: appeng.transformer.asm.ASMTweaker
+          - Transformer: codechicken.core.asm.CodeChickenAccessTransformer
+          - Transformer: cofh.asm.CoFHAccessTransformer
+          - Transformer: makeo.gadomancy.coremod.GadomancyTransformer
+          - Transformer: logisticspipes.asm.LogisticsAccessTransformer
+          - Transformer: net.malisis.core.asm.MalisisCoreAccessTransformer
+          - Transformer: mcp.mobius.mobiuscore.asm.CoreAccessTransformer
+          - Transformer: stevesaddons.asm.StevesAddonsTransformer
+          - Transformer: thaumic.tinkerer.preloader.AccessTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.ModAccessTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.ItemStackTransformer
+          - Transformer: Reika.CaveControl.CaveASMHandler$CaveTransformer
+          - Transformer: Reika.ChromatiCraft.Auxiliary.ChromaASMHandler$ASMExecutor
+          - Transformer: cofh.asm.CoFHClassTransformer
+          - Transformer: net.blay09.mods.craftingtweaks.coremod.GuiScreenClassTransformer
+          - Transformer: Reika.DragonAPI.ASM.InterfaceInjector
+          - Transformer: Reika.DragonAPI.ASM.APIStripper
+          - Transformer: Reika.DragonAPI.ASM.DragonAPIClassTransformer
+          - Transformer: Reika.DragonAPI.ASM.FMLItemBlockPatch
+          - Transformer: Reika.DragonAPI.ASM.FluidNamePatch
+          - Transformer: Reika.DragonAPI.ASM.DependentMethodStripper
+          - Transformer: net.malisis.core.util.chunkcollision.ChunkCollisionTransformer
+          - Transformer: net.malisis.core.util.chunkblock.ChunkBlockTransformer
+          - Transformer: Reika.RotaryCraft.Auxiliary.RotaryASMHandler$ASMExecutor
+          - Transformer: Reika.RotaryCraft.Auxiliary.RotaryASMHandler$InterfaceVerifier
+          - Transformer: Reika.TweakFix.TweakASM$TweakTransformer
+          - Transformer: squeek.applecore.asm.TransformerModuleHandler
+          - Transformer: mods.immibis.core.impl.MultiInterfaceClassTransformer
+          - Transformer: mods.immibis.core.impl.TraitTransformer
+          - Transformer: mods.immibis.core.multipart.MultipartCoreHookTransformer
+          - Transformer: chocohead.patcher.BinniePatcher
+          - Transformer: org.blockartistry.mod.DynSurround.asm.Transformer
+          - Transformer: farseek.core.FarseekClassTransformer
+          - Transformer: streams.core.StreamsClassTransformer
+          - Transformer: Reika.LegacyCraft.LegacyASMHandler$LegacyTransformer
+          - Transformer: com.enderio.core.common.transform.EnderCoreTransformer
+          - Transformer: com.enderio.core.common.transform.EnderCoreTransformerClient
+          - Transformer: fastcraft.J
+          - Transformer: cpw.mods.fml.common.asm.transformers.TerminalTransformer
+          - Transformer: com.mumfrey.liteloader.client.transformers.LiteLoaderEventInjectionTransformer
+          - Transformer: com.mumfrey.liteloader.client.transformers.MinecraftOverlayTransformer
+          - Transformer: com.mumfrey.liteloader.common.transformers.LiteLoaderPacketTransformer
+          - Transformer: cpw.mods.fml.common.asm.transformers.ModAPITransformer
+	JVM Flags: 3 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xms512m -Xmx4096m
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1566 Optifine OptiFine_1.7.10_HD_C1 172 mods loaded, 172 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UC	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UC	FML{7.10.99.99} [Forge Mod Loader] (forge-1.7.10-10.13.4.1566-1.7.10-universal.jar) 
+	UC	Forge{10.13.4.1566} [Minecraft Forge] (forge-1.7.10-10.13.4.1566-1.7.10-universal.jar) 
+	UC	appliedenergistics2-core{rv3-beta-6} [Applied Energistics 2 Core] (minecraft.jar) 
+	UC	CodeChickenCore{1.0.7.47} [CodeChicken Core] (minecraft.jar) 
+	UC	MobiusCore{1.2.5} [MobiusCore] (minecraft.jar) 
+	UC	NotEnoughItems{1.0.5.120} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.5.120-universal.jar) 
+	UC	OpenComputers|Core{1.6.1.11} [OpenComputers (Core)] (minecraft.jar) 
+	UC	ThE-core{1.0.0.1} [Thaumic Energistics Core] (minecraft.jar) 
+	UC	ThaumicTinkerer-preloader{0.1} [Thaumic Tinkerer Core] (minecraft.jar) 
+	UC	OpenModsCore{0.9.1} [OpenModsCore] (minecraft.jar) 
+	UC	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UC	<DragonAPI ASM>{0} [DragonAPI ASM Data Initialization] (minecraft.jar) 
+	UC	BinniePatcher{1.8.2} [Binnie Patcher] (minecraft.jar) 
+	UC	FastCraft{1.23} [FastCraft] (fastcraft-1.23.jar) 
+	UC	IC2{2.2.821-experimental} [IndustrialCraft 2] (industrialcraft-2-2.2.821-experimental.jar) 
+	UC	ImmibisCore{59.1.4} [Immibis Core] (immibis-core-59.1.4.jar) 
+	UC	AdvancedMachines{59.0.2} [Advanced Machines] (advanced-machines-59.0.2.jar) 
+	UC	AdvancedSolarPanel{1.7.10-3.5.1} [Advanced Solar Panels] (AdvancedSolarPanel-1.7.10-3.5.1.jar) 
+	UC	appliedenergistics2{rv3-beta-6} [Applied Energistics 2] (appliedenergistics2-rv3-beta-6.jar) 
+	UC	bdlib{1.9.4.109} [BD Lib] (bdlib-1.9.4.109-mc1.7.10.jar) 
+	UC	ae2stuff{0.5.1.9} [AE2 Stuff] (ae2stuff-rv3-0.5.1.9-mc1.7.10.jar) 
+	UC	AgriCraft{1.7.10-1.5.0} [AgriCraft] (AgriCraft-1.7.10-1.5.0.jar) 
+	UC	AppleCore{1.3.1} [AppleCore] (AppleCore-mc1.7.10-1.3.1.jar) 
+	UC	CoFHCore{1.7.10R3.1.3} [CoFH Core] (CoFHCore-[1.7.10]3.1.3-328.jar) 
+	UC	asielib{0.4.5} [asielib] (AsieLib-1.7.10-0.4.5.jar) 
+	UC	Baubles{1.0.1.10} [Baubles] (Baubles-1.7.10-1.0.1.10.jar) 
+	UC	Thaumcraft{4.2.3.5} [Thaumcraft] (Thaumcraft-1.7.10-4.2.3.5.jar) 
+	UC	Waila{1.5.10} [Waila] (Waila-1.5.10_1.7.10.jar) 
+	UC	Automagy{0.28.2} [Automagy] (Automagy-1.7.10-0.28.2.jar) 
+	UC	Backpack{2.0.1} [Backpack] (backpack-2.0.1-1.7.x.jar) 
+	UC	BiblioCraft{1.11.5} [BiblioCraft] (BiblioCraft[v1.11.5][MC1.7.10].jar) 
+	UC	Mantle{1.7.10-0.3.2.jenkins191} [Mantle] (Mantle-1.7.10-0.3.2b.jar) 
+	UC	Natura{2.2.0} [Natura] (natura-1.7.10-2.2.1a2.jar) 
+	UC	BiomesOPlenty{2.1.0} [Biomes O' Plenty] (BiomesOPlenty-1.7.10-2.1.0.1889-universal.jar) 
+	UC	BiblioWoodsBoP{1.9} [BiblioWoods Biomes O'Plenty Edition] (BiblioWoods[BiomesOPlenty][v1.9].jar) 
+	UC	Forestry{4.2.12.60} [Forestry for Minecraft] (forestry_1.7.10-4.2.12.60.jar) 
+	UC	BiblioWoodsForestry{1.7} [BiblioWoods Forestry Edition] (BiblioWoods[Forestry][v1.7].jar) 
+	UC	BiblioWoodsNatura{1.5} [BiblioWoods Natura Edition] (BiblioWoods[Natura][v1.5].jar) 
+	UC	BinnieCore{2.0-pre14} [Binnie Core] (binnie-mods-2.0-pre14.jar) 
+	UC	Botany{2.0-pre14} [Botany] (binnie-mods-2.0-pre14.jar) 
+	UC	ExtraBees{2.0-pre14} [Extra Bees] (binnie-mods-2.0-pre14.jar) 
+	UC	ExtraTrees{2.0-pre14} [Extra Trees] (binnie-mods-2.0-pre14.jar) 
+	UC	Genetics{2.0-pre14} [Genetics] (binnie-mods-2.0-pre14.jar) 
+	UC	Botania{r1.8-249} [Botania] (Botania r1.8-249.jar) 
+	UC	BuildCraft|Core{7.1.19} [BuildCraft] (buildcraft-7.1.19.jar) 
+	UC	BuildCraft|Energy{7.1.19} [BC Energy] (buildcraft-7.1.19.jar) 
+	UC	BuildCraft|Silicon{7.1.19} [BC Silicon] (buildcraft-7.1.19.jar) 
+	UC	BuildCraft|Builders{7.1.19} [BC Builders] (buildcraft-7.1.19.jar) 
+	UC	BuildCraft|Robotics{7.1.19} [BC Robotics] (buildcraft-7.1.19.jar) 
+	UC	BuildCraft|Transport{7.1.19} [BC Transport] (buildcraft-7.1.19.jar) 
+	UC	BuildCraft|Factory{7.1.19} [BC Factory] (buildcraft-7.1.19.jar) 
+	UC	ThermalFoundation{1.7.10R1.2.6B1} [Thermal Foundation] (ThermalFoundation-[1.7.10]1.2.6B1-117.jar) 
+	UC	ThermalExpansion{1.7.10R4.1.4} [Thermal Expansion] (ThermalExpansion-[1.7.10]4.1.4-247.jar) 
+	UC	BuildCraft|Compat{7.1.5} [BuildCraft Compat] (buildcraft-compat-7.1.5.jar) 
+	UC	CarpentersBlocks{3.3.5} [Carpenter's Blocks] (Carpenter's Blocks v3.3.5 - MC 1.7.10.jar) 
+	UC	Railcraft{9.12.2.0} [Railcraft] (Railcraft_1.7.10-9.12.2.0.jar) 
+	UC	TwilightForest{2.3.8dev} [The Twilight Forest] (twilightforest-1.7.10-2.3.8dev.jar) 
+	UC	ForgeMultipart{1.2.0.345} [Forge Multipart] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UC	chisel{2.9.5.11} [Chisel] (Chisel-2.9.5.11.jar) 
+	UC	ComputerCraft{1.75} [ComputerCraft] (ComputerCraft1.75.jar) 
+	UC	RedstoneArsenal{1.7.10R1.1.3B1} [Redstone Arsenal] (RedstoneArsenal-[1.7.10]1.1.3B1-95.jar) 
+	UC	ExtraUtilities{1.2.12} [Extra Utilities] (extrautilities-1.2.12.jar) 
+	UC	ImmersiveEngineering{0.7.7} [Immersive Engineering] (ImmersiveEngineering-0.7.7.jar) 
+	UC	TConstruct{1.7.10-1.8.8.build988} [Tinkers' Construct] (TConstruct-1.7.10-1.8.8.jar) 
+	UC	ThaumicTinkerer{unspecified} [Thaumic Tinkerer] (ThaumicTinkerer-2.5-1.7.10-517.jar) 
+	UC	MagicBees{2.4.3} [Magic Bees] (magicbees-1.7.10-2.4.3.jar) 
+	UC	Mystcraft{0.12.3.03} [Mystcraft] (mystcraft-1.7.10-0.12.3.03.jar) 
+	UC	MrTJPCoreMod{1.1.0.33} [MrTJPCore] (MrTJPCore-1.7.10-1.1.0.33-universal.jar) 
+	UC	ProjRed|Core{4.7.0pre12.95} [ProjectRed Core] (ProjectRed-1.7.10-4.7.0pre12.95-Base.jar) 
+	UC	DragonAPI{v19a} [DragonAPI] (DragonAPI 1.7.10 V19a.jar) 
+	UC	CaveControl{v19a} [CaveControl] (CaveControl 1.7.10 V19a.jar) 
+	UC	chameleoncreepers{1.0} [Chameleon Creepers] (ChameleonCreepers-1.0.jar) 
+	UC	ChickenChunks{1.3.4.19} [ChickenChunks] (ChickenChunks-1.7.10-1.3.4.19-universal.jar) 
+	UC	ChromatiCraft{v19a} [ChromatiCraft] (ChromatiCraft 1.7.10 V19a.jar) 
+	UE	climatecontrol{0.4} [Climate Control] (ClimateControl-0.4.beta38.jar) 
+	UC	endercore{1.7.10-0.2.0.39_beta} [EnderCore] (EnderCore-1.7.10-0.2.0.39_beta.jar) 
+	UC	EnderIO{1.7.10-2.3.0.429_beta} [Ender IO] (EnderIO-1.7.10-2.3.0.429_beta.jar) 
+	UC	EnderStorage{1.4.7.38} [EnderStorage] (EnderStorage-1.7.10-1.4.7.38-universal.jar) 
+	UC	ProjRed|Transmission{4.7.0pre12.95} [ProjectRed Transmission] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UC	OpenComputers{1.6.1.11} [OpenComputers] (OpenComputers-MC1.7.10-1.6.1.11-universal.jar) 
+	UC	computronics{1.6.0} [Computronics] (Computronics-1.7.10-1.6.0.jar) 
+	UC	CondensedOres{v19a} [CondensedOres] (CondensedOres 1.7.10 V19a.jar) 
+	UC	craftingtweaks{1.0.82} [Crafting Tweaks] (craftingtweaks-mc1.7.10-1.0.82.jar) 
+	UC	CritterPet{v19a} [Critter Pet] (CritterPet 1.7.10 V19a.jar) 
+	UC	dualhotbar{1.6} [Dual Hotbar] (dualhotbar-1.7.10-1.6.jar) 
+	UC	dsurround{1.0.5.11} [Dynamic Surroundings] (DynamicSurroundings-1.7.10-1.0.5.11.jar) 
+	UC	RotaryCraft{v19a} [RotaryCraft] (RotaryCraft 1.7.10 V19a.jar) 
+	UC	ElectriCraft{v19a} [ElectriCraft] (ElectriCraft 1.7.10 V19a.jar) 
+	UC	eplus{3.0.2-d} [Enchanting Plus] (EnchantingPlus-1.7.10-3.0.2-d.jar) 
+	UC	ExpandedRedstone{v19a} [ExpandedRedstone] (ExpandedRedstone 1.7.10 V19a.jar) 
+	UC	extracells{2.3.14} [Extra Cells 2] (ExtraCells-1.7.10-2.3.14b197.jar) 
+	UC	fairylights{1.4.0} [Fairy Lights] (fairylights-1.4.0-1.7.10.jar) 
+	UC	farseek{1.0.11} [farseek] (Farseek-1.0.11.jar) 
+	UC	FlatSigns{2.1.0.19} [Flat Signs] (FlatSigns-1.7.10-universal-2.1.0.19.jar) 
+	UC	ForbiddenMagic{1.7.10-0.575} [Forbidden Magic] (Forbidden Magic-1.7.10-0.575.jar) 
+	UC	foxlib{1.7.10-0.7.0} [FoxLib] (FoxLib-1.7.10-0.7.0.jar) 
+	UC	gadomancy{1.0.7.2} [Gadomancy] (gadomancy-1.7.10-1.0.7.2-DevReika.jar) 
+	UC	gendustry{1.6.3.132} [GenDustry] (gendustry-1.6.3.132-mc1.7.10.jar) 
+	UC	GeoStrata{v19a} [GeoStrata] (GeoStrata 1.7.10 V19a.jar) 
+	UC	Growthcraft{1.7.10-2.7.2} [Growthcraft] (growthcraft-1.7.10-2.7.2-complete-core.jar) 
+	UC	Growthcraft|Cellar{1.7.10-2.7.2} [Growthcraft Cellar] (growthcraft-1.7.10-2.7.2-complete-cellar.jar) 
+	UC	Growthcraft|Apples{1.7.10-2.7.2} [Growthcraft Apples] (growthcraft-1.7.10-2.7.2-complete-apples.jar) 
+	UC	Growthcraft|Fishtrap{1.7.10-2.7.2} [Growthcraft Fishtrap] (growthcraft-1.7.10-2.7.2-complete-fishtrap.jar) 
+	UC	HexWool{0.4.2.16} [HexWool] (HexWool-1.7.10-0.4.2.16.jar) 
+	UC	IC2NuclearControl{2.3.3a-Exist} [Nuclear Control 2] (IC2NuclearControl-2.3.3a-Exist.jar) 
+	UC	immersiveintegration{0.6.8} [Immersive Integration] (immersiveintegration-0.6.8.jar) 
+	UC	IronChest{6.0.62.742} [Iron Chest] (ironchest-1.7.10-6.0.62.742-universal.jar) 
+	UC	JABBA{1.2.2} [JABBA] (Jabba-1.2.2_1.7.10.jar) 
+	UC	LegacyCraft{v19a} [LegacyCraft] (LegacyCraft 1.7.10 V19a.jar) 
+	UC	LogisticsPipes{0.9.3.128} [Logistics Pipes] (logisticspipes-0.9.3.128.jar) 
+	UC	LootTweaks{v19a} [LootTweaks] (LootTweaks 1.7.10 V19a.jar) 
+	UC	malisiscore{1.7.10-0.14.3} [MalisisCore] (malisiscore-1.7.10-0.14.3.jar) 
+	UC	malisisdoors{1.7.10-1.13.2} [Malisis' Doors] (malisisdoors-1.7.10-1.13.2.jar) 
+	UC	MeteorCraft{v19a} [MeteorCraft] (MeteorCraft 1.7.10 V19a.jar) 
+	UC	ReactorCraft{v19a} [ReactorCraft] (ReactorCraft 1.7.10 V19a.jar) 
+	UC	Mimicry{1.7.x_1492_1.0.10} [Mimicry] (Mimicry-1.7.10_1492_1.0.10c.jar) 
+	UC	MineTweaker3{3.0.10} [MineTweaker 3] (MineTweaker3-1.7.10-3.0.10B.jar) 
+	UC	MTRM{1.0} [MineTweakerRecipeMaker] (MineTweakerRecipeMaker-1.7.10-1.1.0.11.jar) 
+	UC	modtweaker2{0.9.5} [Mod Tweaker 2] (ModTweaker2-0.9.5.jar) 
+	UC	Morpheus{1.7.10-1.6.21} [Morpheus] (Morpheus-1.7.10-1.6.21.jar) 
+	UC	NBTEdit{1.7.2.2} [In-game NBTEdit] (NBTEdit_1.7.10.jar) 
+	UC	NEIAddons{1.12.14.40} [NEI Addons] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	NEIAddons|Developer{1.12.14.40} [NEI Addons: Developer Tools] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	NEIAddons|AppEng{1.12.14.40} [NEI Addons: Applied Energistics 2] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	NEIAddons|Botany{1.12.14.40} [NEI Addons: Botany] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	NEIAddons|Forestry{1.12.14.40} [NEI Addons: Forestry] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	NEIAddons|CraftingTables{1.12.14.40} [NEI Addons: Crafting Tables] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	NEIAddons|ExNihilo{1.12.14.40} [NEI Addons: Ex Nihilo] (neiaddons-1.12.14.40-mc1.7.10.jar) 
+	UC	neiintegration{1.1.0} [NEI Integration] (NEIIntegration-MC1.7.10-1.1.0.jar) 
+	UC	OpenMods{0.9.1} [OpenMods] (OpenModsLib-1.7.10-0.9.1.jar) 
+	UC	OpenBlocks{1.5.1} [OpenBlocks] (OpenBlocks-1.7.10-1.5.1.jar) 
+	UC	OpenPeripheralCore{1.3} [OpenPeripheralCore] (OpenPeripheral-1.7.10-AIO-7.jar) 
+	UC	OpenPeripheral{0.5.1} [OpenPeripheralAddons] (OpenPeripheral-1.7.10-AIO-7.jar) 
+	UC	OpenPeripheralIntegration{0.5} [OpenPeripheralIntegration] (OpenPeripheral-1.7.10-AIO-7.jar) 
+	UC	ProjectBlue{1.1.4} [Project Blue] (ProjectBlue-1.1.4-mc1.7.10.jar) 
+	UC	ProjRed|Exploration{4.7.0pre12.95} [ProjectRed Exploration] (ProjectRed-1.7.10-4.7.0pre12.95-World.jar) 
+	UC	ProjRed|Compatibility{4.7.0pre12.95} [ProjectRed Compatibility] (ProjectRed-1.7.10-4.7.0pre12.95-Compat.jar) 
+	UC	ProjRed|Integration{4.7.0pre12.95} [ProjectRed Integration] (ProjectRed-1.7.10-4.7.0pre12.95-Integration.jar) 
+	UC	ProjRed|Fabrication{4.7.0pre12.95} [ProjectRed Fabrication] (ProjectRed-1.7.10-4.7.0pre12.95-Fabrication.jar) 
+	UC	ProjRed|Illumination{4.7.0pre12.95} [ProjectRed Illumination] (ProjectRed-1.7.10-4.7.0pre12.95-Lighting.jar) 
+	UC	runicdungeons{1.1.6d} [Runic Dungeons] (runicdungeons-1.1.6d.jar) 
+	UC	soundfilters{0.8_for_1.7.X} [Sound Filters] (SoundFilters-0.8_for_1.7.X.jar) 
+	UC	StevesFactoryManager{A93} [Steve's Factory Manager] (StevesFactoryManagerA93.jar) 
+	UC	StevesAddons{0.10.16} [Steve's Addons] (StevesAddons-1.7.10-0.10.16.jar) 
+	UC	StorageDrawers{1.7.10-1.10.8} [Storage Drawers] (StorageDrawers-1.7.10-1.10.8.jar) 
+	UC	StorageDrawersBop{1.7.10-1.1.1} [Storage Drawers: Biomes O' Plenty Pack] (StorageDrawers-BiomesOPlenty-1.7.10-1.1.1.jar) 
+	UC	StorageDrawersForestry{1.7.10-1.1.2} [Storage Drawers: Forestry Pack] (StorageDrawers-Forestry-1.7.10-1.1.2.jar) 
+	UC	StorageDrawersMisc{1.7.10-1.1.2} [Storage Drawers: Misc Pack] (StorageDrawers-Misc-1.7.10-1.1.2.jar) 
+	UC	StorageDrawersNatura{1.7.10-1.1.1} [Storage Drawers: Natura Pack] (StorageDrawers-Natura-1.7.10-1.1.1.jar) 
+	UC	streams{0.2} [streams] (Streams-0.2.jar) 
+	UC	Tails{1.7.10-1.4.1a} [Tails] (Tails-1.7.10-1.4.1a.jar) 
+	UC	tcinventoryscan{1.0.10} [TC Inventory Scanning] (tcinventoryscan-mc1.7.10-1.0.10.jar) 
+	UC	tcnodetracker{1.1.2} [TC Node Tracker] (tcnodetracker-1.7.10-1.1.2.jar) 
+	UC	TerritoryZone{v19a} [TerritoryZone] (TerritoryZone 1.7.10 V19a.jar) 
+	UC	thaumcraftneiplugin{@VERSION@} [Thaumcraft NEI Plugin] (thaumcraftneiplugin-1.7.10-1.7a.jar) 
+	UC	thaumicenergistics{1.0.0.6} [Thaumic Energistics] (thaumicenergistics-1.0.0.6-j7.jar) 
+	UC	ThermalDynamics{1.7.10R1.2.0} [Thermal Dynamics] (ThermalDynamics-[1.7.10]1.2.0-171.jar) 
+	UC	TiCTooltips{1.2.5} [TiC Tooltips] (TiCTooltips-mc1.7.10-1.2.5.jar) 
+	UC	TMechworks{0.2.15.106} [Tinkers' Mechworks] (TMechworks-1.7.10-0.2.15.106.jar) 
+	UC	Translocator{1.1.2.15} [Translocator] (Translocator-1.7.10-1.1.2.15-universal.jar) 
+	UC	TweakFix{v@MAJOR_VERSION@@MINOR_VERSION@} [TweakFix] (TweakFix 1.7.10 V19a.jar) 
+	UC	UsefulTNT{v19a} [Useful TNT] (UsefulTNT 1.7.10 V19a.jar) 
+	UC	VoidMonster{v19a} [Void Monster] (VoidMonster 1.7.10 V19a.jar) 
+	UC	wawla{1.3.3} [What Are We Looking At] (Wawla-1.3.3-1.7.10.jar) 
+	UC	worldedit{6.0-beta-01} [WorldEdit] (worldedit-forge-mc1.7.10-6.0-beta-01.jar) 
+	UC	WR-CBE|Core{1.4.1.9} [WR-CBE Core] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UC	WR-CBE|Addons{1.4.1.9} [WR-CBE Addons] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UC	WR-CBE|Logic{1.4.1.9} [WR-CBE Logic] (WR-CBE-1.7.10-1.4.1.9-universal.jar) 
+	UC	McMultipart{1.2.0.345} [Minecraft Multipart Plugin] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	UC	IguanaTweaksTConstruct{1.7.10-2.1.6.163} [Iguana Tinker Tweaks] (IguanaTinkerTweaks-1.7.10-2.1.6.jar) 
+	UC	ForgeMicroblock{1.2.0.345} [Forge Microblocks] (ForgeMultipart-1.7.10-1.2.0.345-universal.jar) 
+	OpenModsLib class transformers: [stencil_patches:FINISHED],[movement_callback:FINISHED],[map_gen_fix:FINISHED],[gl_capabilities_hook:FINISHED],[player_render_hook:FINISHED]
+	Class transformer null safety: all safe
+	AE2 Version: beta rv3-beta-6 for Forge 10.13.4.1448
+	CoFHCore: -[1.7.10]3.1.3-328
+	Mantle Environment: DO NOT REPORT THIS CRASH! Unsupported mods in environment: optifine
+	ThermalFoundation: -[1.7.10]1.2.6B1-117
+	ThermalExpansion: -[1.7.10]4.1.4-247
+	RedstoneArsenal: -[1.7.10]1.1.3B1-95
+	TConstruct Environment: Environment healthy.
+	ThermalDynamics: -[1.7.10]1.2.0-171
